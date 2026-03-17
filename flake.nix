@@ -21,6 +21,8 @@
           tqdm
           transformers
           datasets
+          ipykernel
+          jupyter
         ]))
         cudaPackages.cudnn
         gcc13
