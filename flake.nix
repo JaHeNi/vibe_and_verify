@@ -2,7 +2,7 @@
   description = "Dev shell with required deps";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
   };
 
   outputs = { self, nixpkgs }:
@@ -15,14 +15,13 @@
   in {
     devShells.${system}.default = pkgs.mkShell {
       packages = with pkgs; [
-        (python3.withPackages (ps: with ps; [
+        (python313.withPackages (ps: with ps; [
           torch-bin
           numpy
           tqdm
           transformers
           datasets
         ]))
-        cudatoolkit
         cudaPackages.cudnn
         gcc13
       ];
