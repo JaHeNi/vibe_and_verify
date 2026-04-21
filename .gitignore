@@ -4,3 +4,6 @@ __pycache__
 .direnv
 cot
 distil_cot
+model
+finetuned_model
+pretrained_model
